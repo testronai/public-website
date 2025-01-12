@@ -609,7 +609,7 @@
                             <div class="bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg p-1">
                                 <div class="bg-neutral-900 rounded-lg p-4">
                                     <pre class="text-sm text-gray-300 font-mono">
-<code>// Testron AI Generated Test Code
+<code>// Testron AI Generated Playwright Test Code
 describe('Login Flow', () => {
     it('should login successfully', async () => {
         await page.goto('/login');
@@ -933,52 +933,91 @@ describe('Login Flow', () => {
                             <div class="rounded-xl overflow-hidden shadow-2xl bg-neutral-800 p-4">
                                 <div id="screenshots-carousel" class="relative">
                                     <div class="carousel-container overflow-hidden">
-                                        <!-- Screenshot Placeholders -->
+                                        <!-- Screenshot 1 -->
+                                        <div class="carousel-slide rounded-lg h-64 flex items-center justify-center">
+                                            <img src="./assets/Screenshot1.png" alt="Testron Screenshot 1"
+                                                class="w-full h-full object-cover rounded-lg" loading="lazy">
+                                        </div>
+                                        <!-- Screenshot 2 -->
                                         <div
-                                            class="carousel-slide bg-neutral-700 rounded-lg h-64 flex items-center justify-center">
-                                            <div class="text-center">
-                                                <svg class="w-16 h-16 mx-auto mb-4 text-gray-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                                </svg>
-                                                <p class="text-gray-400">Screenshot 1</p>
-                                            </div>
+                                            class="carousel-slide rounded-lg h-64 flex items-center justify-center hidden">
+                                            <img src="./assets/Screenshot2.png" alt="Testron Screenshot 2"
+                                                class="w-full h-full object-cover rounded-lg" loading="lazy">
+                                        </div>
+                                        <!-- Screenshot 3 -->
+                                        <div
+                                            class="carousel-slide rounded-lg h-64 flex items-center justify-center hidden">
+                                            <img src="./assets/Screenshot3.png" alt="Testron Screenshot 3"
+                                                class="w-full h-full object-cover rounded-lg" loading="lazy">
                                         </div>
                                     </div>
 
                                     <!-- Carousel Navigation -->
                                     <div class="flex justify-center mt-4 space-x-2">
-                                        <button class="w-3 h-3 rounded-full bg-blue-600"></button>
-                                        <button class="w-3 h-3 rounded-full bg-neutral-600"></button>
-                                        <button class="w-3 h-3 rounded-full bg-neutral-600"></button>
+                                        <button class="w-3 h-3 rounded-full bg-blue-600"
+                                            onclick="showSlide(0)"></button>
+                                        <button class="w-3 h-3 rounded-full bg-neutral-600"
+                                            onclick="showSlide(1)"></button>
+                                        <button class="w-3 h-3 rounded-full bg-neutral-600"
+                                            onclick="showSlide(2)"></button>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Feature Highlights -->
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-neutral-800 p-4 rounded-lg">
-                                    <h3 class="text-white font-semibold mb-2">Visual Inspector</h3>
-                                    <p class="text-gray-400">Easily select and inspect webpage elements</p>
-                                </div>
-                                <div class="bg-neutral-800 p-4 rounded-lg">
-                                    <h3 class="text-white font-semibold mb-2">Code Generation</h3>
-                                    <p class="text-gray-400">Instant test code in multiple frameworks</p>
-                                </div>
-                            </div>
+                            <!-- Feature Highlights remain unchanged -->
                         </div>
+
+                        <!-- Update the carousel script -->
+                        <script>
+                            // Type checking and initialization
+                            /*
+                            const slides = document.querySelectorAll('.carousel-slide') as NodeListOf<HTMLElement>;
+                            const dots = document.querySelectorAll('#screenshots-carousel button') as NodeListOf<HTMLButtonElement>;
+                            let currentSlide: number = 0; 
+                            */
+                        
+                            // If you're not using TypeScript, use this instead:
+                            
+                            const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+                            const dots = Array.from(document.querySelectorAll('#screenshots-carousel button'));
+                            let currentSlide = 0;
+                            
+                        
+                            // Add a check to ensure elements are found
+                            if (slides.length > 0 && dots.length > 0) {
+                                function showSlide(index) {
+                                    slides.forEach((slide, i) => {
+                                        slide.classList.toggle('hidden', i !== index);
+                                    });
+                        
+                                    dots.forEach((dot, i) => {
+                                        dot.classList.toggle('bg-blue-600', i === index);
+                                        dot.classList.toggle('bg-neutral-600', i !== index);
+                                    });
+                        
+                                    currentSlide = index;
+                                }
+                        
+                                // Auto-advance carousel every 5 seconds
+                                setInterval(() => {
+                                    const nextSlide = (currentSlide + 1) % slides.length;
+                                    showSlide(nextSlide);
+                                }, 2000);
+                        
+                                // Initialize first slide
+                                showSlide(0);
+                            }
+                        </script>
                     </div>
                 </div>
 
                 <script>
                     // Carousel functionality can be added here
                     const carousel = document.querySelector('#screenshots-carousel');
-                    const slides = document.querySelectorAll('.carousel-slide');
-                    const dots = document.querySelectorAll('.carousel-dots button');
+                    slides = document.querySelectorAll('.carousel-slide');
+                    dots = document.querySelectorAll('.carousel-dots button');
 
-                    let currentSlide = 0;
+                    currentSlide = 0;
 
                     function updateCarousel() {
                         slides.forEach((slide, index) => {
