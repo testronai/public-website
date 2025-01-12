@@ -1513,108 +1513,132 @@ public void loginTest() {
                         </div>
 
                         <!-- Pro Tier -->
-                        <div
-                            class="bg-gradient-to-b from-blue-600 to-purple-600 rounded-2xl p-[1px] hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-1s">
-                            <div class="bg-neutral-800 rounded-2xl p-8 h-full">
-                                <div class="text-center">
-                                    <span
-                                        class="inline-block px-4 py-1 rounded-full bg-blue-600 text-white text-sm mb-4">Popular</span>
-                                    <h3 class="text-xl font-semibold text-white mb-2">Pro</h3>
-                                    <div class="text-4xl font-bold text-white mb-4">
-                                        $19
-                                        <span class="text-sm font-normal text-gray-400">/month</span>
+                        <div class="relative opacity-75 cursor-not-allowed animate__animated animate__fadeInUp animate__delay-1s">
+                            <!-- Coming Soon Tag -->
+                            <div class="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg z-10">
+                                Coming Soon
+                            </div>
+                            
+                            <!-- Original div with overlay -->
+                            <div class="bg-gradient-to-b from-blue-600 to-purple-600 rounded-2xl p-[1px] transition duration-300">
+                                <div class="bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-8 h-full relative">
+                                    <!-- Add semi-transparent overlay -->
+                                    <div class="absolute inset-0 bg-neutral-900/20 rounded-2xl"></div>
+                                    
+                                    <!-- Rest of the content -->
+                                    <div class="relative z-1">
+                                        <div class="text-center">
+                                            <span class="inline-block px-4 py-1 rounded-full bg-blue-600/70 text-white text-sm mb-4">Popular</span>
+                                            <h3 class="text-xl font-semibold text-white mb-2">Pro</h3>
+                                            <div class="text-4xl font-bold text-white mb-4">
+                                                $19
+                                                <span class="text-sm font-normal text-gray-400">/month</span>
+                                            </div>
+                                        </div>
+                                        <ul class="space-y-4 mb-8">
+                                            <li class="flex items-start">
+                                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span class="text-gray-300">All Free Features +</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span class="text-gray-300">OpenAI & Anthropic Integration</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span class="text-gray-300">Advanced Element Inspector</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span class="text-gray-300">Priority Email Support</span>
+                                            </li>
+                                        </ul>
+                                        <button disabled 
+                                                class="block w-full py-3 px-6 text-center rounded-full bg-blue-600/50 text-white cursor-not-allowed">
+                                            Coming Soon
+                                        </button>
                                     </div>
                                 </div>
-                                <ul class="space-y-4 mb-8">
-                                    <li class="flex items-start">
-                                        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span class="text-gray-300">All Free Features +</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span class="text-gray-300">OpenAI & Anthropic Integration</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span class="text-gray-300">Advanced Element Inspector</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        <span class="text-gray-300">Priority Email Support</span>
-                                    </li>
-                                </ul>
-                                <a href="#downloadCTA"
-                                    class="block w-full py-3 px-6 text-center rounded-full bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
-                                    Start Pro Trial
-                                </a>
                             </div>
                         </div>
 
-                        <!-- Enterprise Tier -->
-                        <div
-                            class="bg-neutral-800 rounded-2xl p-8 hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-2s">
-                            <div class="text-center">
-                                <h3 class="text-xl font-semibold text-white mb-2">Enterprise</h3>
-                                <div class="text-4xl font-bold text-white mb-4">
-                                    Custom
-                                    <span class="text-sm font-normal text-gray-400">/month</span>
-                                </div>
-                            </div>
-                            <ul class="space-y-4 mb-8">
-                                <li class="flex items-start">
-                                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span class="text-gray-300">All Pro Features +</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span class="text-gray-300">Custom AI Provider Integration</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span class="text-gray-300">Dedicated Support</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span class="text-gray-300">SLA Guarantee</span>
-                                </li>
-                            </ul>
-                            <a href="#contact"
-                                class="block w-full py-3 px-6 text-center rounded-full bg-white text-neutral-900 hover:bg-gray-100 transition duration-300">
-                                Contact Sales
-                            </a>
-                        </div>
+<!-- Enterprise Tier -->
+<div class="relative opacity-75 cursor-not-allowed animate__animated animate__fadeInUp animate__delay-2s h-full">
+    <!-- Coming Soon Tag -->
+    <div class="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg z-10">
+        Coming Soon
+    </div>
+    
+    <div class="bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-8 relative h-full flex flex-col">
+        <!-- Add semi-transparent overlay -->
+        <div class="absolute inset-0 bg-neutral-900/20 rounded-2xl"></div>
+        
+        <!-- Content -->
+        <div class="relative z-1 flex flex-col flex-grow">
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-white mb-2">Enterprise</h3>
+                <div class="text-4xl font-bold text-white mb-4">
+                    Custom
+                    <span class="text-sm font-normal text-gray-400">/month</span>
+                </div>
+            </div>
+            <ul class="space-y-4 mb-8 flex-grow">
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-300">All Pro Features +</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-300">Custom AI Provider Integration</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-300">Dedicated Support</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-300">SLA Guarantee</span>
+                </li>
+            </ul>
+            <button disabled 
+                    class="block w-full py-3 px-6 text-center rounded-full bg-white/50 text-neutral-900 cursor-not-allowed mt-auto">
+                Coming Soon
+            </button>
+        </div>
+    </div>
+</div>
                     </div>
                 </div>
             </section>
