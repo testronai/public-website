@@ -2013,13 +2013,13 @@ public void loginTest() {
                                     <div>
                                         <label for="subject"
                                             class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                                        <select id="subject" name="subject" required
+                                            <select id="subject" name="subject" required
                                             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition">
                                             <option value="">Select a subject</option>
-                                            <option value="support">Technical Support</option>
-                                            <option value="sales">Sales Inquiry</option>
-                                            <option value="enterprise">Enterprise Solutions</option>
-                                            <option value="feedback">Product Feedback</option>
+                                            <option value="Technical Support">Technical Support</option>
+                                            <option value="Sales Inquiry">Sales Inquiry</option>
+                                            <option value="Enterprise Solutions">Enterprise Solutions</option>
+                                            <option value="Product Feedback">Product Feedback</option>
                                         </select>
                                     </div>
                             
@@ -2042,22 +2042,29 @@ public void loginTest() {
                             </div>
                             
                             <script>
-                            function redirectToGoogleForm(event) {
-                                event.preventDefault();
-                                
-                                // Replace with your actual Google Form URL and field IDs
-                                const googleFormUrl = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform';
-                                const name = encodeURIComponent(document.getElementById('name').value);
-                                const email = encodeURIComponent(document.getElementById('email').value);
-                                const subject = encodeURIComponent(document.getElementById('subject').value);
-                                const message = encodeURIComponent(document.getElementById('message').value);
-                                
-                                // Replace entry.XXXXXX with your actual Google Form field IDs
-                                const populatedUrl = `${googleFormUrl}?usp=pp_url&entry.123456=${name}&entry.789012=${email}&entry.345678=${subject}&entry.901234=${message}`;
-                                
-                                window.open(populatedUrl, '_blank');
-                            }
-                            </script>
+                                function redirectToGoogleForm(event) {
+                                    event.preventDefault();
+                                    
+                                    // Get your form URL by clicking "Send" in Google Forms and copying the link
+                                    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSduyfa7KemUUXaYeNK4IVp8rV4Ai2P7gl7PeuANxl_Cu1HzjQ/viewform';
+                                    
+                                    // Get form values
+                                    const name = encodeURIComponent(document.getElementById('name').value);
+                                    const email = encodeURIComponent(document.getElementById('email').value);
+                                    const howCanWeHelp = encodeURIComponent(document.getElementById('subject').value);
+                                    const message = encodeURIComponent(document.getElementById('message').value);
+                                    
+                                    // Updated with actual field IDs
+                                    const populatedUrl = `${googleFormUrl}?usp=pp_url
+                                        &entry.56930329=${name}
+                                        &entry.577194115=${email}
+                                        &entry.1968833500=${howCanWeHelp}
+                                        &entry.399918949=${message}
+                                        &emailAddress=${email}`;  // This line auto-fills the email recording checkbox
+                                    
+                                    window.open(populatedUrl.replace(/\s+/g, ''), '_blank');
+                                }
+                                </script>
 
                             <!-- Contact Information -->
                             <div class="animate__animated animate__fadeInRight">
@@ -2187,13 +2194,17 @@ public void loginTest() {
                             <h3 class="text-lg font-semibold text-white mb-4">Products</h3>
                             <ul class="space-y-2">
                                 <li>
-                                    <a href="#" class="hover:text-white">Testron Co-pilot</a>
+                                    <a href="https://chromewebstore.google.com/detail/testron-testing-co-pilot/ipbkoaadeihckgcdnbnahnooojmjoffm" target="_blank" 
+                                    rel="noopener noreferrer" class="hover:text-white">Testron Co-pilot</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="hover:text-white">Chrome Extension</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="hover:text-white">Documentation</a>
+                                    <a 
+                                        href="https://github.com/testronai/documentation" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        class="hover:text-white">
+                                        Documentation
+                                    </a>
                                 </li>
                                 <!-- <li>
                                     <a href="#" class="hover:text-white">API Reference</a>
@@ -2205,8 +2216,40 @@ public void loginTest() {
                             <ul class="space-y-2">
                                 <li><a href="#" class="hover:text-white">Blog</a></li>
                                 <li><a href="#" class="hover:text-white">Tutorials</a></li>
-                                <li><a href="#" class="hover:text-white">Support</a></li>
-                                <li><a href="#" class="hover:text-white">Community</a></li>
+                                <li>
+                                    <a href="mailto:testronai.com@gmail.com" 
+                                       onclick="handleSupportClick(event)"
+                                       class="hover:text-white transition duration-300"
+                                       title="Email Support">
+                                        Support
+                                    </a>
+                                </li>
+                                
+                                <script>
+                                function handleSupportClick(event) {
+                                    event.preventDefault();
+                                    const email = 'testronai.com@gmail.com';
+                                    
+                                    // Try to open mailto
+                                    window.location.href = `mailto:${email}`;
+                                    
+                                    // Fallback: Show a popup with the email address
+                                    setTimeout(() => {
+                                        const mailtoFailed = !document.hasFocus();
+                                        if (mailtoFailed) {
+                                            alert(`Please email us at: ${email}\n\nIf your email client didn't open automatically, you can copy this address and send us an email directly.`);
+                                        }
+                                    }, 500);
+                                }
+                                </script>
+                                <li>
+                                    <a href="https://discord.gg/7MGWNqbY" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer" 
+                                       class="hover:text-white transition duration-300">
+                                        Community
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div>
