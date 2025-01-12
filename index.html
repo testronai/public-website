@@ -372,13 +372,19 @@
             <section id="header" class="bg-neutral-900 relative">
                 <nav class="container mx-auto px-6 py-4">
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                            <a href="/" class="flex items-center">
-                                <img src="./assets/logo.png" alt="Testron AI Logo"
-                                    class="h-10 w-10 mr-2 transition-opacity duration-300 opacity-100"
-                                    style="object-fit: contain;" loading="lazy">
-                                <span class="text-2xl font-bold text-white">Testron AI</span>
-                            </a>
+                        <div class="flex items-center space-x-4">
+                            <!-- Animated Logo Container -->
+                            <div class="animate__animated animate__pulse animate__infinite animate__slower">
+                                <img src="./assets/logo.png" 
+                                     alt="Testron AI Logo" 
+                                     class="h-12 md:h-16 w-auto transform hover:scale-110 transition-transform duration-300 cursor-pointer"
+                                     style="filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));">
+                            </div>
+                            
+                            <!-- Brand Name (optional) -->
+                            <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text">
+                                Testron AI
+                            </span>
                         </div>
 
                         <!-- Desktop Navigation -->
