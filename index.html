@@ -975,35 +975,35 @@ describe('Login Flow', () => {
                             const dots = document.querySelectorAll('#screenshots-carousel button') as NodeListOf<HTMLButtonElement>;
                             let currentSlide: number = 0; 
                             */
-                        
+
                             // If you're not using TypeScript, use this instead:
-                            
+
                             const slides = Array.from(document.querySelectorAll('.carousel-slide'));
                             const dots = Array.from(document.querySelectorAll('#screenshots-carousel button'));
                             let currentSlide = 0;
-                            
-                        
+
+
                             // Add a check to ensure elements are found
                             if (slides.length > 0 && dots.length > 0) {
                                 function showSlide(index) {
                                     slides.forEach((slide, i) => {
                                         slide.classList.toggle('hidden', i !== index);
                                     });
-                        
+
                                     dots.forEach((dot, i) => {
                                         dot.classList.toggle('bg-blue-600', i === index);
                                         dot.classList.toggle('bg-neutral-600', i !== index);
                                     });
-                        
+
                                     currentSlide = index;
                                 }
-                        
+
                                 // Auto-advance carousel every 5 seconds
                                 setInterval(() => {
                                     const nextSlide = (currentSlide + 1) % slides.length;
                                     showSlide(nextSlide);
                                 }, 2000);
-                        
+
                                 // Initialize first slide
                                 showSlide(0);
                             }
@@ -1358,56 +1358,50 @@ describe('Login Flow', () => {
                     <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                         <!-- Playwright -->
                         <div class="relative group animate__animated animate__fadeInUp">
-                            <div
-                                class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
                             </div>
-                            <div
-                                class="relative bg-white ring-1 ring-gray-200 rounded-lg p-6 hover:shadow-xl transition duration-300">
+                            <div class="relative bg-white ring-1 ring-gray-200 rounded-lg p-6 hover:shadow-xl transition duration-300 h-full">
                                 <div class="flex items-center justify-center h-20 mb-4">
                                     <svg class="w-16 h-16 text-[#2EAD33]" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3a1 1 0 00-1 1v4H7a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V6a1 1 0 00-1-1z" />
+                                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3a1 1 0 00-1 1v4H7a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V6a1 1 0 00-1-1z" />
                                     </svg>
                                 </div>
                                 <h3 class="text-xl font-semibold text-center mb-4">Playwright</h3>
                                 <div class="space-y-2 text-gray-600">
                                     <p class="text-center mb-4">TypeScript Support</p>
-                                    <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto">
+                                    <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto whitespace-pre">
 <code>test('login flow', async ({ page }) => {
-  await page.goto('/login');
-  await page.fill('#email', 'user@test.com');
-  await page.click('button[type="submit"]');
+    await page.goto('/login');
+    await page.fill('#email', 'user@test.com');
+    await page.click('button[type="submit"]');
 });</code>
-                            </pre>
+                                    </pre>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Cypress -->
                         <div class="relative group animate__animated animate__fadeInUp animate__delay-1s">
-                            <div
-                                class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
                             </div>
-                            <div
-                                class="relative bg-white ring-1 ring-gray-200 rounded-lg p-6 hover:shadow-xl transition duration-300">
+                            <div class="relative bg-white ring-1 ring-gray-200 rounded-lg p-6 hover:shadow-xl transition duration-300 h-full">
                                 <div class="flex items-center justify-center h-20 mb-4">
                                     <svg class="w-16 h-16 text-[#17202C]" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3a1 1 0 00-1 1v4H7a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V6a1 1 0 00-1-1z" />
+                                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3a1 1 0 00-1 1v4H7a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V6a1 1 0 00-1-1z" />
                                     </svg>
                                 </div>
                                 <h3 class="text-xl font-semibold text-center mb-4">Cypress</h3>
                                 <div class="space-y-2 text-gray-600">
                                     <p class="text-center mb-4">TypeScript Support</p>
-                                    <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto">
+                                    <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto whitespace-pre">
 <code>describe('Login', () => {
-  it('should login successfully', () => {
-    cy.visit('/login')
-    cy.get('#email').type('user@test.com')
-    cy.get('button').click()
-  })
+    it('should login successfully', () => {
+        cy.visit('/login')
+        cy.get('#email').type('user@test.com')
+        cy.get('button').click()
+    })
 })</code>
-                            </pre>
+                                    </pre>
                                 </div>
                             </div>
                         </div>
@@ -1471,8 +1465,7 @@ public void loginTest() {
 
                     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         <!-- Free Tier -->
-                        <div
-                            class="bg-neutral-800 rounded-2xl p-8 hover:scale-105 transition duration-300 animate__animated animate__fadeInUp">
+                        <div class="bg-neutral-800 rounded-2xl p-8 hover:scale-105 transition duration-300 animate__animated animate__fadeInUp">
                             <div class="text-center">
                                 <h3 class="text-xl font-semibold text-white mb-2">Free</h3>
                                 <div class="text-4xl font-bold text-white mb-4">
@@ -1482,15 +1475,31 @@ public void loginTest() {
                             </div>
                             <ul class="space-y-4 mb-8">
                                 <li class="flex items-start">
-                                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                    <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M5 13l4 4L19 7" />
                                     </svg>
-                                    <span class="text-gray-300">Ollama (Local LLM) Support</span>
+                                    <span class="text-gray-300">All Major AI Models Support:</span>
+                                </li>
+                                <li class="flex items-start pl-8">
+                                    <svg class="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                    </svg>
+                                    <span class="text-gray-400">Claude, OpenAI, DeepSeek</span>
+                                </li>
+                                <li class="flex items-start pl-8">
+                                    <svg class="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                    </svg>
+                                    <span class="text-gray-400">Ollama (Local LLM)</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                    <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M5 13l4 4L19 7" />
@@ -1498,7 +1507,7 @@ public void loginTest() {
                                     <span class="text-gray-300">Basic Element Inspector</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                    <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M5 13l4 4L19 7" />
@@ -1513,31 +1522,42 @@ public void loginTest() {
                         </div>
 
                         <!-- Pro Tier -->
-                        <div class="relative opacity-75 cursor-not-allowed animate__animated animate__fadeInUp animate__delay-1s">
+                        <div class="relative opacity-75 cursor-not-allowed animate__animated animate__fadeInUp animate__delay-1s h-full">
                             <!-- Coming Soon Tag -->
                             <div class="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg z-10">
                                 Coming Soon
                             </div>
-                            
+                        
                             <!-- Original div with overlay -->
-                            <div class="bg-gradient-to-b from-blue-600 to-purple-600 rounded-2xl p-[1px] transition duration-300">
-                                <div class="bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-8 h-full relative">
+                            <div class="bg-gradient-to-b from-blue-600 to-purple-600 rounded-2xl p-[1px] transition duration-300 h-full">
+                                <div class="bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-8 h-full relative flex flex-col">
                                     <!-- Add semi-transparent overlay -->
                                     <div class="absolute inset-0 bg-neutral-900/20 rounded-2xl"></div>
-                                    
+                        
                                     <!-- Rest of the content -->
-                                    <div class="relative z-1">
+                                    <div class="relative z-1 flex flex-col flex-grow">
                                         <div class="text-center">
                                             <span class="inline-block px-4 py-1 rounded-full bg-blue-600/70 text-white text-sm mb-4">Popular</span>
                                             <h3 class="text-xl font-semibold text-white mb-2">Pro</h3>
-                                            <div class="text-4xl font-bold text-white mb-4">
-                                                $19
+                                            <div class="text-4xl font-bold text-white mb-4 flex items-center justify-center gap-1">
+                                                <div class="relative flex items-center">
+                                                    <div class="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-md px-2 py-1">
+                                                        <span class="opacity-0">$19</span>
+                                                        <div class="absolute inset-0 flex items-center justify-center overflow-hidden">
+                                                            <div class="flex space-x-1">
+                                                                <span class="bg-gradient-to-r from-blue-400 to-purple-400 blur-sm px-6 py-1">
+                                                                    ████
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <span class="text-sm font-normal text-gray-400">/month</span>
                                             </div>
                                         </div>
-                                        <ul class="space-y-4 mb-8">
+                                        <ul class="space-y-4 mb-8 flex-grow">
                                             <li class="flex items-start">
-                                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                                <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
                                                     viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                         d="M5 13l4 4L19 7" />
@@ -1545,15 +1565,31 @@ public void loginTest() {
                                                 <span class="text-gray-300">All Free Features +</span>
                                             </li>
                                             <li class="flex items-start">
-                                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                                <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
                                                     viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                         d="M5 13l4 4L19 7" />
                                                 </svg>
-                                                <span class="text-gray-300">OpenAI & Anthropic Integration</span>
+                                                <span class="text-gray-300">Browser Automation</span>
+                                            </li>
+                                            <li class="flex items-start pl-8">
+                                                <svg class="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M9 5l7 7-7 7" />
+                                                </svg>
+                                                <span class="text-gray-400">Cloud Execution Support</span>
+                                            </li>
+                                            <li class="flex items-start pl-8">
+                                                <svg class="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M9 5l7 7-7 7" />
+                                                </svg>
+                                                <span class="text-gray-400">Multi-page Test Generation</span>
                                             </li>
                                             <li class="flex items-start">
-                                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                                <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
                                                     viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                         d="M5 13l4 4L19 7" />
@@ -1561,7 +1597,7 @@ public void loginTest() {
                                                 <span class="text-gray-300">Advanced Element Inspector</span>
                                             </li>
                                             <li class="flex items-start">
-                                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                                <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
                                                     viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                         d="M5 13l4 4L19 7" />
@@ -1569,8 +1605,8 @@ public void loginTest() {
                                                 <span class="text-gray-300">Priority Email Support</span>
                                             </li>
                                         </ul>
-                                        <button disabled 
-                                                class="block w-full py-3 px-6 text-center rounded-full bg-blue-600/50 text-white cursor-not-allowed">
+                                        <button disabled
+                                            class="block w-full py-3 px-6 text-center rounded-full bg-blue-600/50 text-white cursor-not-allowed mt-auto">
                                             Coming Soon
                                         </button>
                                     </div>
@@ -1578,67 +1614,99 @@ public void loginTest() {
                             </div>
                         </div>
 
-<!-- Enterprise Tier -->
-<div class="relative opacity-75 cursor-not-allowed animate__animated animate__fadeInUp animate__delay-2s h-full">
-    <!-- Coming Soon Tag -->
-    <div class="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg z-10">
-        Coming Soon
-    </div>
-    
-    <div class="bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-8 relative h-full flex flex-col">
-        <!-- Add semi-transparent overlay -->
-        <div class="absolute inset-0 bg-neutral-900/20 rounded-2xl"></div>
-        
-        <!-- Content -->
-        <div class="relative z-1 flex flex-col flex-grow">
-            <div class="text-center">
-                <h3 class="text-xl font-semibold text-white mb-2">Enterprise</h3>
-                <div class="text-4xl font-bold text-white mb-4">
-                    Custom
-                    <span class="text-sm font-normal text-gray-400">/month</span>
-                </div>
-            </div>
-            <ul class="space-y-4 mb-8 flex-grow">
-                <li class="flex items-start">
-                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span class="text-gray-300">All Pro Features +</span>
-                </li>
-                <li class="flex items-start">
-                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span class="text-gray-300">Custom AI Provider Integration</span>
-                </li>
-                <li class="flex items-start">
-                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span class="text-gray-300">Dedicated Support</span>
-                </li>
-                <li class="flex items-start">
-                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span class="text-gray-300">SLA Guarantee</span>
-                </li>
-            </ul>
-            <button disabled 
-                    class="block w-full py-3 px-6 text-center rounded-full bg-white/50 text-neutral-900 cursor-not-allowed mt-auto">
-                Coming Soon
-            </button>
-        </div>
-    </div>
-</div>
+                        <!-- Enterprise Tier -->
+                        <div class="relative opacity-75 cursor-not-allowed animate__animated animate__fadeInUp animate__delay-2s h-full">
+                            <!-- Coming Soon Tag -->
+                            <div class="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg z-10">
+                                Coming Soon
+                            </div>
+                        
+                            <div class="bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-8 relative h-full flex flex-col">
+                                <!-- Add semi-transparent overlay -->
+                                <div class="absolute inset-0 bg-neutral-900/20 rounded-2xl"></div>
+                        
+                                <!-- Content -->
+                                <div class="relative z-1 flex flex-col flex-grow">
+                                    <div class="text-center">
+                                        <h3 class="text-xl font-semibold text-white mb-2">Enterprise</h3>
+                                        <div class="text-4xl font-bold text-white mb-4">
+                                            Custom
+                                            <span class="text-sm font-normal text-gray-400">/month</span>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-4 mb-8 flex-grow">
+                                        <li class="flex items-start">
+                                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                            <span class="text-gray-300">All Pro Features +</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                            <span class="text-gray-300">Enterprise Cloud Integration</span>
+                                        </li>
+                                        <li class="flex items-start pl-8">
+                                            <svg class="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7" />
+                                            </svg>
+                                            <span class="text-gray-400">Amazon Bedrock</span>
+                                        </li>
+                                        <li class="flex items-start pl-8">
+                                            <svg class="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7" />
+                                            </svg>
+                                            <span class="text-gray-400">Google AI Studio/Vertex AI</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                            <span class="text-gray-300">Custom Feature Development</span>
+                                        </li>
+                                        <li class="flex items-start pl-8">
+                                            <svg class="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7" />
+                                            </svg>
+                                            <span class="text-gray-400">Enterprise-specific Solutions</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                            <span class="text-gray-300">24/7 Dedicated Support</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                            <span class="text-gray-300">Enterprise SLA</span>
+                                        </li>
+                                    </ul>
+                                    <button disabled
+                                        class="block w-full py-3 px-6 text-center rounded-full bg-white/50 text-neutral-900 cursor-not-allowed mt-auto">
+                                        Coming Soon
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -2031,10 +2099,18 @@ public void loginTest() {
                         <div>
                             <h3 class="text-lg font-semibold text-white mb-4">Products</h3>
                             <ul class="space-y-2">
-                                <li><a href="#" class="hover:text-white">Testron Co-pilot</a></li>
-                                <li><a href="#" class="hover:text-white">Chrome Extension</a></li>
-                                <li><a href="#" class="hover:text-white">Documentation</a></li>
-                                <li><a href="#" class="hover:text-white">API Reference</a></li>
+                                <li>
+                                    <a href="#" class="hover:text-white">Testron Co-pilot</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-white">Chrome Extension</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-white">Documentation</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="#" class="hover:text-white">API Reference</a>
+                                </li> -->
                             </ul>
                         </div>
                         <div>
@@ -2049,10 +2125,18 @@ public void loginTest() {
                         <div>
                             <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
                             <ul class="space-y-2">
-                                <li><a href="#" class="hover:text-white">About Us</a></li>
-                                <li><a href="#" class="hover:text-white">Careers</a></li>
-                                <li><a href="#" class="hover:text-white">Contact</a></li>
-                                <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                                <li>
+                                    <a href="#" class="hover:text-white">About Us</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="#" class="hover:text-white">Careers</a>
+                                </li> -->
+                                <li>
+                                    <a href="#" class="hover:text-white">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
