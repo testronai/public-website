@@ -1364,7 +1364,7 @@ describe('Login Flow', () => {
                         <p class="text-gray-600 text-xl">Generate test code for your preferred testing framework</p>
                     </div>
 
-                    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto px-4 sm:px-6">
                         <!-- Playwright -->
                         <div class="relative group animate__animated animate__fadeInUp">
                             <div
@@ -1381,7 +1381,7 @@ describe('Login Flow', () => {
                                 <h3 class="text-xl font-semibold text-center mb-4">Playwright</h3>
                                 <div class="space-y-2 text-gray-600">
                                     <p class="text-center mb-4">TypeScript Support</p>
-                                    <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto whitespace-pre">
+                                    <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto whitespace-pre-wrap break-all">
 <code>test('login flow', async ({ page }) => {
     await page.goto('/login');
     await page.fill('#email', 'user@test.com');
@@ -1408,7 +1408,7 @@ describe('Login Flow', () => {
                                 <h3 class="text-xl font-semibold text-center mb-4">Cypress</h3>
                                 <div class="space-y-2 text-gray-600">
                                     <p class="text-center mb-4">TypeScript Support</p>
-                                    <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto whitespace-pre">
+                                    <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto whitespace-pre-wrap break-all">
 <code>describe('Login', () => {
     it('should login successfully', () => {
         cy.visit('/login')
@@ -1427,7 +1427,7 @@ describe('Login Flow', () => {
                                 class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
                             </div>
                             <div
-                                class="relative bg-white ring-1 ring-gray-200 rounded-lg p-6 hover:shadow-xl transition duration-300">
+                                class="relative bg-white ring-1 ring-gray-200 rounded-lg p-6 hover:shadow-xl transition duration-300 h-full">
                                 <div class="flex items-center justify-center h-20 mb-4">
                                     <svg class="w-16 h-16 text-[#43B02A]" viewBox="0 0 24 24" fill="currentColor">
                                         <path
@@ -1437,7 +1437,7 @@ describe('Login Flow', () => {
                                 <h3 class="text-xl font-semibold text-center mb-4">Selenium</h3>
                                 <div class="space-y-2 text-gray-600">
                                     <p class="text-center mb-4">Java Support</p>
-                                    <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto">
+                                    <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto whitespace-pre-wrap break-all">
 <code>@Test
 public void loginTest() {
     driver.get("/login");
