@@ -520,16 +520,70 @@
                                 class="flex flex-col sm:flex-row gap-4 animate__animated animate__fadeInUp animate__delay-2s">
                                 <a href="https://chromewebstore.google.com/detail/testron-testing-co-pilot/ipbkoaadeihckgcdnbnahnooojmjoffm?authuser=0&hl=en"
                                     class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition transform hover:scale-105 text-center"
-                                    target="_blank"
-                                    rel="noopener noreferrer">
+                                    target="_blank" rel="noopener noreferrer">
                                     Download Extension
                                 </a>
-                                <a href="https://www.youtube.com/watch?v=05fvtjDc-xs"
-                                    class="inline-block bg-neutral-800 text-white px-8 py-3 rounded-full hover:bg-neutral-700 transition transform hover:scale-105 text-center"
-                                    target="_blank"
-                                    rel="noopener noreferrer">
+                                <a href="#" onclick="openVideoModal(event)"
+                                    class="inline-block bg-neutral-800 text-white px-8 py-3 rounded-full hover:bg-neutral-700 transition transform hover:scale-105 text-center">
                                     Watch Demo
                                 </a>
+                                <!-- Add Modal HTML -->
+                                <div id="videoModal"
+                                    class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+                                    <div class="relative bg-black rounded-lg w-full max-w-4xl">
+                                        <!-- Close button -->
+                                        <button onclick="closeVideoModal()"
+                                            class="absolute -top-10 right-0 text-white hover:text-gray-300">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </button>
+                                        <!-- Video container with 16:9 aspect ratio -->
+                                        <div class="relative pt-[56.25%]">
+                                            <iframe id="youtubeVideo" class="absolute inset-0 w-full h-full rounded-lg"
+                                                src="" title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add JavaScript -->
+                                <script>
+                                    function openVideoModal(event) {
+                                        event.preventDefault();
+                                        const modal = document.getElementById('videoModal');
+                                        const iframe = document.getElementById('youtubeVideo');
+                                        iframe.src = 'https://www.youtube.com/embed/05fvtjDc-xs?autoplay=1';
+                                        modal.classList.remove('hidden');
+                                        // Prevent body scrolling when modal is open
+                                        document.body.style.overflow = 'hidden';
+                                    }
+
+                                    function closeVideoModal() {
+                                        const modal = document.getElementById('videoModal');
+                                        const iframe = document.getElementById('youtubeVideo');
+                                        iframe.src = ''; // Clear the source to stop the video
+                                        modal.classList.add('hidden');
+                                        // Restore body scrolling
+                                        document.body.style.overflow = 'auto';
+                                    }
+
+                                    // Close modal when clicking outside the video
+                                    document.getElementById('videoModal').addEventListener('click', function (event) {
+                                        if (event.target === this) {
+                                            closeVideoModal();
+                                        }
+                                    });
+
+                                    // Close modal on escape key press
+                                    document.addEventListener('keydown', function (event) {
+                                        if (event.key === 'Escape') {
+                                            closeVideoModal();
+                                        }
+                                    });
+                                </script>
                             </div>
 
                             <div
