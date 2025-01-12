@@ -1,0 +1,1640 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="c931534c-ab41-432f-9b46-c8b2dc534572" data-section-id="c931534c-ab41-432f-9b46-c8b2dc534572">
+
+<htmlCode>
+<div id="root">
+    <section id="header" class="bg-neutral-900 relative">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-white">
+                        Testron AI
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="#products" class="text-gray-300 hover:text-white transition">Products</a>
+                    <a href="#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-white transition">Testimonials</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+                    <a href="#downloadCTA" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition animate__animated animate__pulse animate__infinite">
+                        Download
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="hamburger focus:outline-none">
+                        <span class="hamburger-top bg-white"></span>
+                        <span class="hamburger-middle bg-white"></span>
+                        <span class="hamburger-bottom bg-white"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-neutral-900 p-6 space-y-4 animate__animated animate__fadeIn">
+                <a href="#features" class="block text-gray-300 hover:text-white transition">Features</a>
+                <a href="#products" class="block text-gray-300 hover:text-white transition">Products</a>
+                <a href="#pricing" class="block text-gray-300 hover:text-white transition">Pricing</a>
+                <a href="#testimonials" class="block text-gray-300 hover:text-white transition">Testimonials</a>
+                <a href="#contact" class="block text-gray-300 hover:text-white transition">Contact</a>
+                <a href="#downloadCTA" class="block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition text-center">
+                    Download
+                </a>
+            </div>
+        </nav>
+
+        <style>
+            .hamburger {
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                position: relative;
+            }
+
+            .hamburger-top,
+            .hamburger-middle,
+            .hamburger-bottom {
+                position: absolute;
+                width: 24px;
+                height: 2px;
+                top: 0;
+                left: 0;
+                transition: all 0.5s;
+            }
+
+            .hamburger-middle {
+                transform: translateY(7px);
+            }
+
+            .hamburger-bottom {
+                transform: translateY(14px);
+            }
+
+            .open .hamburger-top {
+                transform: rotate(45deg) translateY(6px) translateX(6px);
+            }
+
+            .open .hamburger-middle {
+                display: none;
+            }
+
+            .open .hamburger-bottom {
+                transform: rotate(-45deg) translateY(6px) translateX(-6px);
+            }
+        </style>
+
+        <script>
+            const btn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('open');
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!btn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    btn.classList.remove('open');
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // Close mobile menu when window is resized
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    btn.classList.remove('open');
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        </script>
+    </section>
+</div>
+</htmlCode></element><element id="730451d5-6f02-4dbd-80fc-a4daeb01997f" data-section-id="730451d5-6f02-4dbd-80fc-a4daeb01997f">
+
+<htmlCode>
+<div id="root">
+    <section id="hero" class="bg-neutral-900 min-h-[70vh] flex items-center relative overflow-hidden">
+        <!-- Background gradient effect -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
+        
+        <!-- Animated background particles -->
+        <div id="particles-js" class="absolute inset-0"></div>
+
+        <div class="container mx-auto px-6 py-12 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white animate__animated animate__fadeInUp">
+                        Transform Test Automation with 
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                            AI Power
+                        </span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 animate__animated animate__fadeInUp animate__delay-1s">
+                        Create, maintain, and scale your test automation with unprecedented efficiency. Transform natural language into production-ready test code across multiple frameworks.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="#downloadCTA" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition transform hover:scale-105 text-center">
+                            Download Extension
+                        </a>
+                        <a href="#demoShowcase" class="inline-block bg-neutral-800 text-white px-8 py-3 rounded-full hover:bg-neutral-700 transition transform hover:scale-105 text-center">
+                            Watch Demo
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-8 text-gray-400 animate__animated animate__fadeInUp animate__delay-3s">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span>Multiple AI Providers</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span>Multi-Framework Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative animate__animated animate__fadeInRight">
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg p-1">
+                        <div class="bg-neutral-900 rounded-lg p-4">
+                            <pre class="text-sm text-gray-300 font-mono">
+<code>// Testron AI Generated Test Code
+describe('Login Flow', () => {
+    it('should login successfully', async () => {
+        await page.goto('/login');
+        await page.fill('#email', 'user@example.com');
+        await page.fill('#password', '********');
+        await page.click('button[type="submit"]');
+        await expect(page).toHaveURL('/dashboard');
+    });
+});</code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-blue-600 text-white px-4 py-2 rounded-full text-sm">
+                        AI-Powered
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#ffffff' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</div>
+</htmlCode></element><element id="aa6ebb10-57ec-4644-813c-b63ead71295f" data-section-id="aa6ebb10-57ec-4644-813c-b63ead71295f">
+
+<htmlCode>
+<div id="root">
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold mb-4">Powerful Features</h2>
+                <p class="text-gray-600 text-xl">Everything you need for modern test automation</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AI Provider Support -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp">
+                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Multiple AI Providers</h3>
+                    <p class="text-gray-600 mb-4">Support for leading AI models including Claude, GPT, Groq, and Ollama.</p>
+                    <ul class="text-gray-500 space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Anthropic (Claude)
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            OpenAI (GPT models)
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Local LLM Support
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Framework Support -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Test Framework Support</h3>
+                    <p class="text-gray-600 mb-4">Generate code for popular testing frameworks seamlessly.</p>
+                    <ul class="text-gray-500 space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Playwright with TypeScript
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Cypress with TypeScript
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Selenium with Java
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Smart Features -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Smart Features</h3>
+                    <p class="text-gray-600 mb-4">Advanced capabilities for efficient test creation.</p>
+                    <ul class="text-gray-500 space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Visual Element Inspector
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Context-Aware Suggestions
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Syntax Highlighting
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cost Management -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp">
+                    <div class="bg-yellow-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Cost Management</h3>
+                    <p class="text-gray-600 mb-4">Efficient token usage and cost tracking features.</p>
+                    <ul class="text-gray-500 space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Token Usage Warnings
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Cost Tracking
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Free Model Support
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="8c17da57-794f-460e-b293-f98c832a3cf5" data-section-id="8c17da57-794f-460e-b293-f98c832a3cf5">
+
+<htmlCode>
+<div id="root">
+    <section id="demoShowcase" class="py-20 bg-neutral-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-white mb-4">See Testron in Action</h2>
+                <p class="text-gray-400 text-xl">Watch how easily you can create test automation code</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Demo Video Section -->
+                <div class="rounded-xl overflow-hidden shadow-2xl animate__animated animate__fadeInLeft">
+                    <div class="aspect-w-16 aspect-h-9 bg-neutral-800 relative">
+                        <!-- Placeholder for video -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-blue-600 flex items-center justify-center animate-pulse">
+                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-400">Demo Video Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screenshots Carousel -->
+                <div class="space-y-8 animate__animated animate__fadeInRight">
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-neutral-800 p-4">
+                        <div id="screenshots-carousel" class="relative">
+                            <div class="carousel-container overflow-hidden">
+                                <!-- Screenshot Placeholders -->
+                                <div class="carousel-slide bg-neutral-700 rounded-lg h-64 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        <p class="text-gray-400">Screenshot 1</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Navigation -->
+                            <div class="flex justify-center mt-4 space-x-2">
+                                <button class="w-3 h-3 rounded-full bg-blue-600"></button>
+                                <button class="w-3 h-3 rounded-full bg-neutral-600"></button>
+                                <button class="w-3 h-3 rounded-full bg-neutral-600"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature Highlights -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-neutral-800 p-4 rounded-lg">
+                            <h3 class="text-white font-semibold mb-2">Visual Inspector</h3>
+                            <p class="text-gray-400">Easily select and inspect webpage elements</p>
+                        </div>
+                        <div class="bg-neutral-800 p-4 rounded-lg">
+                            <h3 class="text-white font-semibold mb-2">Code Generation</h3>
+                            <p class="text-gray-400">Instant test code in multiple frameworks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Carousel functionality can be added here
+            const carousel = document.querySelector('#screenshots-carousel');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dots button');
+            
+            let currentSlide = 0;
+            
+            function updateCarousel() {
+                slides.forEach((slide, index) => {
+                    if (index === currentSlide) {
+                        slide.style.display = 'flex';
+                    } else {
+                        slide.style.display = 'none';
+                    }
+                });
+                
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('bg-blue-600');
+                        dot.classList.remove('bg-neutral-600');
+                    } else {
+                        dot.classList.add('bg-neutral-600');
+                        dot.classList.remove('bg-blue-600');
+                    }
+                });
+            }
+
+            // Auto-advance carousel every 5 seconds
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateCarousel();
+            }, 5000);
+        </script>
+    </section>
+</div>
+</htmlCode></element><element id="3bacfb57-4169-40f4-9887-ee2d046542c7" data-section-id="3bacfb57-4169-40f4-9887-ee2d046542c7">
+
+<htmlCode>
+<div id="root">
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold mb-4">Our Products</h2>
+                <p class="text-gray-600 text-xl">Empowering test automation with AI innovation</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Main Product Card -->
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-1 rounded-2xl shadow-xl mb-12 animate__animated animate__fadeInUp">
+                    <div class="bg-white rounded-2xl p-8">
+                        <div class="flex flex-col lg:flex-row items-center gap-8">
+                            <div class="lg:w-2/3">
+                                <div class="flex items-center mb-4">
+                                    <h3 class="text-2xl font-bold">Testron Co-pilot</h3>
+                                    <span class="ml-4 px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">Chrome Extension</span>
+                                </div>
+                                
+                                <p class="text-gray-600 mb-6">
+                                    Transform natural language into production-ready test code with our AI-powered Chrome extension.
+                                </p>
+
+                                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                                    <div class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600">Multiple AI Providers Support</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600">Multiple Testing Frameworks</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600">Visual Element Inspector</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600">Cost Management Features</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-wrap gap-4">
+                                    <a href="#downloadCTA" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition transform hover:scale-105">
+                                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10 3v9m0 0l-3-3m3 3l3-3m-9 9h12a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v9a2 2 0 002 2z"/>
+                                        </svg>
+                                        Download Extension
+                                    </a>
+                                    <a href="#demoShowcase" class="inline-flex items-center px-6 py-3 bg-neutral-100 text-neutral-800 rounded-full hover:bg-neutral-200 transition">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        Watch Demo
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="lg:w-1/3">
+                                <div class="bg-neutral-100 p-6 rounded-xl">
+                                    <div class="text-center mb-4">
+                                        <svg class="w-16 h-16 mx-auto text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="text-sm text-gray-500 mb-2">Compatible with</p>
+                                        <div class="flex justify-center gap-4">
+                                            <div class="flex items-center">
+                                                <svg class="w-8 h-8 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0112 8.16a5.454 5.454 0 015.415 3.188l3.953-6.848C19.169 1.757 15.79 0 12 0z"/>
+                                                    <path d="M16.635 13.751c.141-.673.166-1.374.064-2.062l-5.235 9.068c.812.193 1.654.292 2.514.292 3.043 0 5.799-1.255 7.769-3.272l-3.953-6.848a5.454 5.454 0 01-1.159 2.822z"/>
+                                                    <path d="M2.632 4.501C.956 6.583.001 9.201 0 12.001c0 2.472.745 4.745 2.001 6.659l3.953-6.848A5.454 5.454 0 014.415 9.01L2.632 4.501z"/>
+                                                </svg>
+                                                <span class="ml-2">Chrome</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Products -->
+                <div class="text-center animate__animated animate__fadeInUp animate__delay-1s">
+                    <h3 class="text-xl font-semibold text-gray-600 mb-4">More Products Coming Soon</h3>
+                    <p class="text-gray-500">Stay tuned for more exciting products in our pipeline</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="a96810aa-8665-4986-a776-b980b8ccb13e" data-section-id="a96810aa-8665-4986-a776-b980b8ccb13e">
+
+<htmlCode>
+<div id="root">
+    <section id="aiProviders" class="py-20 bg-neutral-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-white mb-4">Supported AI Providers</h2>
+                <p class="text-gray-400 text-xl">Choose from leading AI models for your test automation</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Anthropic (Claude) -->
+                <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition duration-300 animate__animated animate__fadeInUp">
+                    <div class="h-16 w-16 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white text-center mb-4">Anthropic (Claude)</h3>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Advanced reasoning</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>High accuracy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OpenAI (GPT) -->
+                <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="h-16 w-16 bg-green-500/10 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white text-center mb-4">OpenAI (GPT)</h3>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Latest GPT models</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Natural language</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Groq -->
+                <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="h-16 w-16 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white text-center mb-4">Groq (Llama)</h3>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Ultra-fast inference</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Cost-effective</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ollama -->
+                <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="h-16 w-16 bg-orange-500/10 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white text-center mb-4">Ollama (Local)</h3>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Local deployment</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Privacy focused</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center animate__animated animate__fadeIn animate__delay-4s">
+                <p class="text-gray-400 mb-8">Choose the AI provider that best suits your needs and budget</p>
+                <a href="#downloadCTA" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition transform hover:scale-105">
+                    Get Started Now
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="a4968199-1f39-4794-8460-e9c341e65080" data-section-id="a4968199-1f39-4794-8460-e9c341e65080">
+
+<htmlCode>
+<div id="root">
+    <section id="frameworks" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold mb-4">Supported Frameworks</h2>
+                <p class="text-gray-600 text-xl">Generate test code for your preferred testing framework</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Playwright -->
+                <div class="relative group animate__animated animate__fadeInUp">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative bg-white ring-1 ring-gray-200 rounded-lg p-6 hover:shadow-xl transition duration-300">
+                        <div class="flex items-center justify-center h-20 mb-4">
+                            <svg class="w-16 h-16 text-[#2EAD33]" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3a1 1 0 00-1 1v4H7a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V6a1 1 0 00-1-1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-4">Playwright</h3>
+                        <div class="space-y-2 text-gray-600">
+                            <p class="text-center mb-4">TypeScript Support</p>
+                            <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto">
+<code>test('login flow', async ({ page }) => {
+  await page.goto('/login');
+  await page.fill('#email', 'user@test.com');
+  await page.click('button[type="submit"]');
+});</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cypress -->
+                <div class="relative group animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative bg-white ring-1 ring-gray-200 rounded-lg p-6 hover:shadow-xl transition duration-300">
+                        <div class="flex items-center justify-center h-20 mb-4">
+                            <svg class="w-16 h-16 text-[#17202C]" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3a1 1 0 00-1 1v4H7a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V6a1 1 0 00-1-1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-4">Cypress</h3>
+                        <div class="space-y-2 text-gray-600">
+                            <p class="text-center mb-4">TypeScript Support</p>
+                            <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto">
+<code>describe('Login', () => {
+  it('should login successfully', () => {
+    cy.visit('/login')
+    cy.get('#email').type('user@test.com')
+    cy.get('button').click()
+  })
+})</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Selenium -->
+                <div class="relative group animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative bg-white ring-1 ring-gray-200 rounded-lg p-6 hover:shadow-xl transition duration-300">
+                        <div class="flex items-center justify-center h-20 mb-4">
+                            <svg class="w-16 h-16 text-[#43B02A]" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3a1 1 0 00-1 1v4H7a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V6a1 1 0 00-1-1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-4">Selenium</h3>
+                        <div class="space-y-2 text-gray-600">
+                            <p class="text-center mb-4">Java Support</p>
+                            <pre class="bg-neutral-50 p-3 rounded-lg text-sm overflow-x-auto">
+<code>@Test
+public void loginTest() {
+    driver.get("/login");
+    driver.findElement(By.id("email"))
+         .sendKeys("user@test.com");
+    driver.findElement(By.tagName("button"))
+         .click();
+}</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 animate__animated animate__fadeIn animate__delay-3s">
+                <a href="#downloadCTA" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition transform hover:scale-105">
+                    <span class="mr-2">Try All Frameworks</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="069e9650-fbef-410c-95f5-13671a969dc5" data-section-id="069e9650-fbef-410c-95f5-13671a969dc5">
+
+<htmlCode>
+<div id="root">
+    <section id="pricing" class="py-20 bg-neutral-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-gray-400 text-xl">Choose the plan that works best for you</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Free Tier -->
+                <div class="bg-neutral-800 rounded-2xl p-8 hover:scale-105 transition duration-300 animate__animated animate__fadeInUp">
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-white mb-2">Free</h3>
+                        <div class="text-4xl font-bold text-white mb-4">
+                            $0
+                            <span class="text-sm font-normal text-gray-400">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300">Ollama (Local LLM) Support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300">Basic Element Inspector</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300">Community Support</span>
+                        </li>
+                    </ul>
+                    <a href="#downloadCTA" class="block w-full py-3 px-6 text-center rounded-full bg-white text-neutral-900 hover:bg-gray-100 transition duration-300">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Pro Tier -->
+                <div class="bg-gradient-to-b from-blue-600 to-purple-600 rounded-2xl p-[1px] hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="bg-neutral-800 rounded-2xl p-8 h-full">
+                        <div class="text-center">
+                            <span class="inline-block px-4 py-1 rounded-full bg-blue-600 text-white text-sm mb-4">Popular</span>
+                            <h3 class="text-xl font-semibold text-white mb-2">Pro</h3>
+                            <div class="text-4xl font-bold text-white mb-4">
+                                $19
+                                <span class="text-sm font-normal text-gray-400">/month</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-300">All Free Features +</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-300">OpenAI & Anthropic Integration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-300">Advanced Element Inspector</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-300">Priority Email Support</span>
+                            </li>
+                        </ul>
+                        <a href="#downloadCTA" class="block w-full py-3 px-6 text-center rounded-full bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
+                            Start Pro Trial
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Tier -->
+                <div class="bg-neutral-800 rounded-2xl p-8 hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-white mb-2">Enterprise</h3>
+                        <div class="text-4xl font-bold text-white mb-4">
+                            Custom
+                            <span class="text-sm font-normal text-gray-400">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300">All Pro Features +</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300">Custom AI Provider Integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300">Dedicated Support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300">SLA Guarantee</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 px-6 text-center rounded-full bg-white text-neutral-900 hover:bg-gray-100 transition duration-300">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="c7899047-bee1-4ea4-800e-36d7a895e1ac" data-section-id="c7899047-bee1-4ea4-800e-36d7a895e1ac">
+
+<htmlCode>
+<div id="root">
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold mb-4">What Our Users Say</h2>
+                <p class="text-gray-600 text-xl">Trusted by QA engineers and developers worldwide</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-600 text-center mb-6">
+                        "Testron has revolutionized our test automation workflow. What used to take hours now takes minutes. The AI-powered code generation is incredibly accurate."
+                    </blockquote>
+                    <div class="text-center">
+                        <p class="font-semibold text-gray-800">Sarah Johnson</p>
+                        <p class="text-gray-500 text-sm">Senior QA Engineer at TechCorp</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-600 text-center mb-6">
+                        "The multi-framework support is amazing. We can generate tests for both Cypress and Playwright without changing our workflow. Extremely efficient!"
+                    </blockquote>
+                    <div class="text-center">
+                        <p class="font-semibold text-gray-800">Michael Chen</p>
+                        <p class="text-gray-500 text-sm">Lead Developer at StartupX</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-600 text-center mb-6">
+                        "The cost management features are a game-changer. Being able to track token usage and optimize costs while maintaining quality is exactly what we needed."
+                    </blockquote>
+                    <div class="text-center">
+                        <p class="font-semibold text-gray-800">Emma Williams</p>
+                        <p class="text-gray-500 text-sm">QA Manager at EnterpriseFlow</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Stats -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-20 animate__animated animate__fadeIn animate__delay-3s">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">500+</div>
+                    <p class="text-gray-600">Active Users</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">100K+</div>
+                    <p class="text-gray-600">Tests Generated</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
+                    <p class="text-gray-600">Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="517b2d4d-d620-4fc5-9e5d-8e46b1524d84" data-section-id="517b2d4d-d620-4fc5-9e5d-8e46b1524d84">
+
+<htmlCode>
+<div id="root">
+    <section id="downloadCTA" class="py-20 bg-neutral-900 relative overflow-hidden">
+        <!-- Background gradient effect -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
+        
+        <!-- Animated particles background -->
+        <div id="particles-js-cta" class="absolute inset-0"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 animate__animated animate__fadeInUp">
+                    Transform Your Test Automation Today
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 animate__animated animate__fadeInUp animate__delay-1s">
+                    Start creating AI-powered test automation in minutes with our Chrome extension
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12 animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#" class="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition transform hover:scale-105 text-lg group">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-3H8v-4h3V7l5 5-5 5z"/>
+                        </svg>
+                        Download Extension
+                        <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <span class="text-gray-400">or</span>
+                    <a href="#" class="text-gray-300 hover:text-white transition flex items-center">
+                        View on Chrome Web Store
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Feature highlights -->
+                <div class="grid md:grid-cols-3 gap-8 mb-12 animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="bg-neutral-800/50 rounded-xl p-6">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-white text-lg font-semibold mb-2">Quick Setup</h3>
+                        <p class="text-gray-400">Install and start generating tests in under 2 minutes</p>
+                    </div>
+                    <div class="bg-neutral-800/50 rounded-xl p-6">
+                        <div class="text-purple-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-white text-lg font-semibold mb-2">Multiple AI Models</h3>
+                        <p class="text-gray-400">Choose from leading AI providers or use local models</p>
+                    </div>
+                    <div class="bg-neutral-800/50 rounded-xl p-6">
+                        <div class="text-green-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-white text-lg font-semibold mb-2">Free Tier Available</h3>
+                        <p class="text-gray-400">Start with our free tier using local LLM support</p>
+                    </div>
+                </div>
+
+                <div class="text-gray-400 animate__animated animate__fadeInUp animate__delay-4s">
+                    <p>Compatible with Chrome browser version 88 and above</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS('particles-js-cta', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: '#ffffff' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.5, random: false },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+                    move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: { enable: true, mode: 'repulse' },
+                        onclick: { enable: true, mode: 'push' },
+                        resize: true
+                    }
+                },
+                retina_detect: true
+            });
+        </script>
+    </section>
+</div>
+</htmlCode></element><element id="0e86896a-fc91-4beb-8abf-1b583724a9ed" data-section-id="0e86896a-fc91-4beb-8abf-1b583724a9ed">
+
+<htmlCode>
+<div id="root">
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 animate__animated animate__fadeIn">
+                    <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
+                    <p class="text-gray-600 text-xl">Have questions? We're here to help</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="animate__animated animate__fadeInLeft">
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                                    placeholder="Your name">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                                    placeholder="your@email.com">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                                <select id="subject" name="subject" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition">
+                                    <option value="">Select a subject</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="sales">Sales Inquiry</option>
+                                    <option value="enterprise">Enterprise Solutions</option>
+                                    <option value="feedback">Product Feedback</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                                    placeholder="Your message"></textarea>
+                            </div>
+                            
+                            <button type="submit"
+                                class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition transform hover:scale-105">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="animate__animated animate__fadeInRight">
+                        <div class="bg-neutral-900 rounded-xl p-8 text-white h-full">
+                            <h3 class="text-2xl font-semibold mb-6">Other Ways to Connect</h3>
+                            
+                            <div class="space-y-8">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-lg font-semibold mb-1">Email Support</h4>
+                                        <p class="text-gray-400">support@testron.ai</p>
+                                        <p class="text-sm text-gray-500 mt-1">24/7 support for our customers</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-lg font-semibold mb-1">Live Chat</h4>
+                                        <p class="text-gray-400">Available during business hours</p>
+                                        <p class="text-sm text-gray-500 mt-1">Mon-Fri, 9AM-6PM EST</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-lg font-semibold mb-1">Documentation</h4>
+                                        <p class="text-gray-400">Comprehensive guides and API docs</p>
+                                        <a href="#" class="text-blue-500 hover:text-blue-400 text-sm mt-1 inline-block">Visit Documentation →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Add form submission logic here
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+        </script>
+    </section>
+</div>
+</htmlCode></element><element id="7e6232f6-c30a-425f-b11f-789cf967f585" data-section-id="7e6232f6-c30a-425f-b11f-789cf967f585">
+
+<htmlCode>
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold text-white">Testron AI</h3>
+          <p class="text-sm">Pioneering the future of test automation through artificial intelligence.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-white">
+              <span class="sr-only">Twitter</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+            </a>
+            <a href="#" class="hover:text-white">
+              <span class="sr-only">GitHub</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+            </a>
+            <a href="#" class="hover:text-white">
+              <span class="sr-only">LinkedIn</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Products</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Testron Co-pilot</a></li>
+            <li><a href="#" class="hover:text-white">Chrome Extension</a></li>
+            <li><a href="#" class="hover:text-white">Documentation</a></li>
+            <li><a href="#" class="hover:text-white">API Reference</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Resources</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+            <li><a href="#" class="hover:text-white">Tutorials</a></li>
+            <li><a href="#" class="hover:text-white">Support</a></li>
+            <li><a href="#" class="hover:text-white">Community</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">About Us</a></li>
+            <li><a href="#" class="hover:text-white">Careers</a></li>
+            <li><a href="#" class="hover:text-white">Contact</a></li>
+            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-gray-700 pt-8">
+        <p class="text-center text-sm">© 2024 Testron AI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
